@@ -1,10 +1,8 @@
-module EqInstances where
+module Chapter6.EqInstancesSpec where
 
 import Test.Hspec
-import Test.QuickCheck
-import Control.Exception (evaluate)
 
-data TisAnInteger =
+newtype TisAnInteger =
   TisAn Integer deriving Show
 
 data Pair a =
@@ -24,9 +22,9 @@ data EitherOr a b =
 checkEqAndNotEq :: Eq a => (a, a) -> Bool
 checkEqAndNotEq (a, b) = (a == a) && (a /= b)
 
-spec :: IO ()
-spec = hspec $ do
-  describe "Eq instances" $ do
+--spec :: Spec
+--spec = do
+--  describe "Eq instances" $ do
 --    it "should work for TisAnInteger" $ do
 --        (TisAn 4, TisAn 3) `shouldSatisfy` checkEqAndNotEq
 --

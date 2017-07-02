@@ -1,0 +1,5 @@
+.idea
+.ideaHaskellLib
+.stack-work
+haskellKatas.iml
+cabal.config

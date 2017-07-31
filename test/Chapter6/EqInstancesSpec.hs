@@ -32,7 +32,7 @@ checkEqAndNotEq (a, b) = (a == a) && (a /= b)
 spec :: Spec
 spec =
   describe "Eq instances" $ do
-    it "should compie" $ "" `shouldBe` ""
+    it "should compile" $ "" `shouldBe` ""
 --    it "should work for TisAnInteger" $ (TisAn 4, TisAn 3) `shouldSatisfy` checkEqAndNotEq
 --    it "should work for Pair" $ (Pair 2 4, Pair 2 5) `shouldSatisfy` checkEqAndNotEq
 --    it "should work for Tuple" $ ((Tuple 3 'c'), (Tuple 3 'd')) `shouldSatisfy` checkEqAndNotEq

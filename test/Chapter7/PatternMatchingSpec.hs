@@ -20,6 +20,7 @@ showUser _ = undefined
 f :: (a, b, c) -> (d, e, f) -> ((a, d), (c, f))
 f = undefined
 
+--use compare and pattern match on it
 compareInts :: Int -> Int -> String
 compareInts = undefined
 

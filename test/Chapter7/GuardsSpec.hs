@@ -3,10 +3,9 @@ module Chapter7.GuardsSpec where
 import           Test.Hspec
 
 myAbs :: Integer -> Integer
-myAbs x =
-  if x < 0
-    then (-x)
-    else x
+myAbs x
+  | x < 0 = -x
+  | otherwise = x
 
 newtype Age =
   Age Integer
@@ -16,19 +15,20 @@ data User
   | RegisteredUser Age
 
 userOlder10 :: User -> String
-userOlder10 (RegisteredUser (Age age)) =
-  if age >= 9
-    then "Yes"
-    else "Nono"
-userOlder10 _ = "Nono"
+userOlder10 user =
+  case user of
+    (RegisteredUser (Age age)) | age >= 9 -> "Yes"
+    _ -> "Nono"
 
 avgGrade :: (Fractional a, Ord a) => a -> Char
 avgGrade x
-  | x / 100 >= 0.9 = 'A'
-  | x / 100 >= 0.8 = 'B'
-  | x / 100 >= 0.7 = 'C'
-  | x / 100 >= 0.59 = 'D'
+  | divHun >= 0.9 = 'A'
+  | divHun >= 0.8 = 'B'
+  | divHun >= 0.7 = 'C'
+  | divHun >= 0.59 = 'D'
   | otherwise = 'F'
+  where
+    divHun = x / 100
 
 spec :: Spec
 spec =

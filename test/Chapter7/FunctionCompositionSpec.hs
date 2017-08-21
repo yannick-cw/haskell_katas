@@ -29,16 +29,16 @@ XX    X              XXXXXX                XXX    X                     X       
 
 -}
 f :: [Integer]
-f = take 5 (enumFrom 3)
+f = (take 5 . enumFrom) 3
 
 f2 :: Enum a => a -> [a]
-f2 x = take 5 (enumFrom x)
+f2 = take 5 . enumFrom
 
 mapAndFilter :: [Integer]
-mapAndFilter = map (+ 1) (filter (== 4) (map (* 2) (take 5 [1,2 ..])))
+mapAndFilter = (map (+ 1) . filter (== 4) . map (* 2) . take 5) [1,2 ..]
 
 g :: (a -> b) -> (a, c) -> (b, c)
-g = undefined
+g f (a, c) = (f a, c)
 
 spec :: Spec
 spec =
@@ -46,4 +46,4 @@ spec =
     it "rewrite f to use . notation" $ f `shouldBe` [3, 4, 5, 6, 7]
     it "rewrite mapAndFilter with . notation" $ mapAndFilter `shouldBe` [5]
     it "rewrite f2 with . notation and pointfree" $ f2 1 `shouldBe` [1, 2, 3, 4, 5]
-    xit "inplement g" $ g id (22, "Hi") `shouldBe` (22, "Hi")
+    xit "implement g" $ g id (22, "Hi") `shouldBe` (22, "Hi")

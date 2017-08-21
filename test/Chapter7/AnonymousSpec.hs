@@ -6,18 +6,21 @@ import           Test.Hspec
 addOneIfOdd :: Int -> Int
 addOneIfOdd n =
   if odd n
-    then f n
+    then (\x -> x + 1) n
     else n
-  where
-    f n = n + 1
 
 -- rewrite as lambda
 addFive :: Int -> Int -> Int
-addFive x y = (if x > y then y else x) + 5
+addFive =
+  \x y ->
+    (if x > y
+       then y
+       else x) +
+    5
 
 -- rewrite to not use lambda
 mflip :: (t2 -> t1 -> t) -> t1 -> t2 -> t
-mflip f = \x -> \y -> f y x
+mflip f x y = f y x
 
 spec :: Spec
 spec =

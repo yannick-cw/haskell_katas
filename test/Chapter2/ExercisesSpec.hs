@@ -11,6 +11,9 @@ triple x = x * 3
 
 waxOff x = triple x
 
+squareAndPi :: Integer -> Double
+squareAndPi value = undefined
+
 spec :: Spec
 spec =
   describe "Exercises Chapter 2" $ do
@@ -33,3 +36,6 @@ spec =
 --      -- When the previous tests passed Rewrite waxOn as a function with a where clause an run tests again
 --      it "What is the expected output" $ (waxOff waxOn) `shouldBe` -- Enter your expected value
 
+--    describe "Intermediate tests" $ do
+--      it "should multiply 3.14 with the square of a value" $ (squareAndPi 5) `shouldBe` (3.5 * 25)
+--      it "should do the correct math" $ 8 + 7 * 9 `shouldBe` 135

@@ -3,3 +3,4 @@
 .stack-work
 haskellKatas.iml
 cabal.config
+dist

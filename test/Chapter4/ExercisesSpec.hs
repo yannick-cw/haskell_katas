@@ -15,7 +15,7 @@ f :: (a, b) -> (c, d) -> ((b, d), (a, c))
 f = undefined
 
 myAbs :: Integer -> Integer
-myAbs undefined
+myAbs = undefined
 
 spec :: Spec
 spec =

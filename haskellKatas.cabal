@@ -32,6 +32,7 @@ test-suite haskellKatas-test
   other-modules: Chapter10.FoldsSpec
                , Chapter11.AdtSpec
                , Chapter12.MaybeSpec
+               , Chapter2.ExercisesSpec
                , Chapter6.EqInstancesSpec
                , Chapter7.AnonymousSpec
                , Chapter7.FunctionCompositionSpec

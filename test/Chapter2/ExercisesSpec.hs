@@ -37,5 +37,5 @@ spec =
 --      it "What is the expected output" $ (waxOff waxOn) `shouldBe` -- Enter your expected value
 
 --    describe "Intermediate tests" $ do
---      it "should multiply 3.14 with the square of a value" $ (squareAndPi 5) `shouldBe` (3.5 * 25)
+--      it "should multiply 3.14 with the square of a value" $ (squareAndPi 5) `shouldBe` (3.14 * 25)
 --      it "should do the correct math" $ 8 + 7 * 9 `shouldBe` 135

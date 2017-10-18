@@ -39,7 +39,7 @@ spec =
 --    describe "Building functions" $ do
 --        it "Match the 2 Strings" $ ("Curry is awesome") `shouldBe` "Curry is awesome!"
 --        it "Use `take` and `drop` to match the 2 Strings" $ ("Curry is awesome!") `shouldBe` "y"
---        it "Use `take` and `drop` to match the 2 Strings" $ ("Curry is awesome!") `shouldBe` "awesome!"
+--        it "Use `drop` to match the 2 Strings" $ ("Curry is awesome!") `shouldBe` "awesome!"
 
 --        it "Should return the third letter of a string" $ thirdLetter "Curry on" `shouldBe` 'r'
 --        it "Should the nth letter of a string" $ letterIndex 2 `shouldBe` 'r'

@@ -43,4 +43,4 @@ spec =
 
 --        it "Should return the third letter of a string" $ thirdLetter "Curry on" `shouldBe` 'r'
 --        it "Should the nth letter of a string" $ letterIndex 2 `shouldBe` 'r'
---        it "should reverse the sentence `Curry is awesome`" $ rvrs "Curry is awesome" `shouldBe` "awesome is Curry"
+--        it "should reverse the sentence `Curry is awesome` using only `drop` and `take`" $ rvrs "Curry is awesome" `shouldBe` "awesome is Curry"

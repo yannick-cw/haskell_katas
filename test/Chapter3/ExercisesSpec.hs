@@ -4,7 +4,7 @@ import Test.Hspec
 
 
 rvrs :: String -> String
-rvrs sentence = unwords (reverse (words sentence))
+rvrs x = ((drop 9 x) ++ (" " ++ (take 2 (drop 6 x)))) ++ (" " ++ (take 5 x))
 
 thirdLetter :: String -> Char
 thirdLetter str = (!!) str 2
@@ -39,4 +39,4 @@ spec =
 
         it "Should return the third letter of a string" $ thirdLetter "Curry on" `shouldBe` 'r'
         it "Should the nth letter of a string" $ letterIndex 2 `shouldBe` 'r'
-        it "should reverse the sentence `Curry is awesome`" $ rvrs "Curry is awesome" `shouldBe` "awesome is Curry"
+        it "should reverse the sentence `Curry is awesome` using only `drop` and `take`" $ rvrs "Curry is awesome" `shouldBe` "awesome is Curry"

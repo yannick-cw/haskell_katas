@@ -8,8 +8,8 @@ allAwesome = [awesome, alsoAwesome]
 
 x = 5
 
-isPalidrom :: (Eq a) => [a] -> Bool
-isPalidrom word = undefined
+isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome word = undefined
 
 f :: (a, b) -> (c, d) -> ((b, d), (a, c))
 f = undefined
@@ -41,9 +41,9 @@ spec =
 --      it "Should it work?" $ ((8 == 8) && ('b' < 'a')) `shouldBe` ???
 --      it "Should it work?" $ ((8 == 8) && 9) `shouldBe` ???
 
---    describe "Is it a Palidrom" $ do
---      it "should be a palidrom" $ (isPalidrom "Music") `shouldBe` False
---      it "should NOT be a palidrom" $ (isPalidrom "racecar") `shouldBe` True
+--    describe "Is it a Palindrome" $ do
+--      it "should NOT be a palindrome" $ (isPalindrome "Music") `shouldBe` False
+--      it "should be a palindrome" $ (isPalindrome "racecar") `shouldBe` True
 
 --    describe "the absolute value using `if-then-else`" $ do
 --      it "Should return the absolute value for positiv numbers" $ (myAbs 5) `shouldBe` 5

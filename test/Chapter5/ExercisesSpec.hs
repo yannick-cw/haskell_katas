@@ -77,6 +77,6 @@ spec =
 --       it "should sing the first song" $ sing `shouldBe` "Singing in the rain"
 --    change the the sind function to sing the second song
 --       xit "should sing the second song" $ sing `shouldBe` "Somewhere over the rainbow"
---     describe "Type-Kwon-Do" $ do
+--     describe "Type-Kwon-Do" $
 --         it "should call h and return a" $ h 1 `shouldBe` 'a'
 --      The rest of the examples should be tested in GHCi

@@ -35,6 +35,7 @@ test-suite haskellKatas-test
                , Chapter2.ExercisesSpec
                , Chapter3.ExercisesSpec
                , Chapter4.ExercisesSpec
+               , Chapter5.ExercisesSpec
                , Chapter6.EqInstancesSpec
                , Chapter7.AnonymousSpec
                , Chapter7.FunctionCompositionSpec
